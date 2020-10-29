@@ -1,0 +1,32 @@
+ul {
+    margin: auto;
+}
+
+.text-content {
+    text-align: center;
+    font-family: Courier;
+    font-style: monospace;
+}
+
+/* .ttt {
+    margin: auto;
+} */
+
+/*li {
+    border: 3px solid pink;
+    width: 200px;
+    display: block;
+} */
+
+.X{
+    content: "X";
+    color: red;
+}
+
+.O{
+    content: "O";
+    color: yellow;
+
+
+
+}

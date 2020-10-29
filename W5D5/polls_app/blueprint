@@ -1,0 +1,47 @@
+table: users
+    column: username, unique
+
+    Association: has_many authored_polls
+                 has_many responses
+
+table: polls
+    column: title
+            author_id
+
+    Association: belongs_to author
+                has_many questions
+                
+
+table: questions
+    column: body, text, 
+            poll_id
+
+    Association: has_many answer_choices
+                 belongs_to Poll
+                        
+    
+table: answers_choices
+    column: respond, text
+            question_id
+
+    Association:  belongs_to question
+                  has_many responses
+
+table: responses
+    column: respondent_id
+            answer_choice_id
+
+    Association: belongs_to answer_choice
+                 belongs_to respondent
+
+
+Model: Capitalize + Singular 
+table: lowercase + plural
+column: singular 
+
+
+#when to use belongs_to and when to use has has_one
+    -one data belongs to a table (id matching)
+        *need foreign key
+    -has_many can have many datas from one table
+    -has_one has one role matching from other table

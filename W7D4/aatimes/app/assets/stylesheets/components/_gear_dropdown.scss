@@ -1,0 +1,71 @@
+            // // Use the gear_dropdown.png screenshot as a style guide
+            // #gear-dropdown {
+            //     display: none;
+            //     position: relative;
+            // }
+            // #gear-dropdown:hover {
+            //     display: block;
+            //     // position: ;
+            // }
+            // // .dropdown {
+            // //     position: relative;
+            // //     display: inline-block;
+            // // }
+            // #gear-dropdown {
+            //     display: none;
+            //     position: absolute;
+            //     background-color: #f9f9f9;
+            //     min-width: 160px;
+            //     box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+            //     padding: 12px 16px;
+            //     z-index: 1;
+            // }
+            // #gear-dropdown:hover {
+            //     display: block;
+            // }
+            .gear-dropdown {
+                position: absolute;
+                display: none;
+                padding: 10px;
+                width: 200px;
+                right: 100px;
+                background-color: white;
+                z-index: 1;
+                box-shadow: -1px 4px 6px 1px rgba(0, 0, 0, 0.09);
+                li {
+                    font-family: $sans-serif;
+                    font-size: 11px;
+                    font-weight: normal;
+                    color: $dark-gray;
+                }
+                a {
+                    display: block;
+                    padding-top: 20px;
+                }
+                a:hover {
+                    background-color: $light-gray;
+                    text-decoration: none;
+                }
+                .help-border {
+                    display: block;
+                    border-top: 1px solid $gray;
+                }
+                .help {
+                    color: $blue;
+                    text-decoration: underline;
+                }
+                .dropdown-subtitle {
+                    padding-top: 10px;
+                    font-size: 9px;
+                }
+                .editions {
+                    font-size: 9px;
+                }
+            }
+            
+            #gear:hover {
+                //applies to any of it's children
+                .gear-dropdown {
+                    display: block;
+                }
+            }

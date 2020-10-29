@@ -1,0 +1,58 @@
+<style>
+table,
+td {
+    border: 1px solid pink;
+}
+
+thead,
+tfoot {
+    background-color: blue;
+    color: #fff;
+}
+</style>
+
+<table>
+    <thead>
+        <tr>
+            <th colspan="2">ONE SINGLE CAT</th>
+        </tr>
+    </thead>
+    <tbody>
+        <tr>
+            <td>NAME</td>
+            <td><%= @cat.name %></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>BIRTH DATE</td>
+            <td><%= @cat.birth_date %></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>COLOR</td>
+            <td><%= @cat.color %></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>SEX</td>
+            <td><%= @cat.sex %></td>
+        </tr>
+    </tbody>
+    <tbody>
+        <tr>
+            <td>DESCRIPTION</td>
+            <td><%= @cat.description %></td>
+        </tr>
+    </tbody>
+</table>
+
+
+<a href="<%= edit_cat_url(@cat) %>">Edit this Cat</a>
+
+<form action="<%= cat_url(@cat) %>" method="POST">
+  <input type="hidden" name="_method" value="DELETE">
+  <input type="submit" value="Delete This Cat">
+</form>
