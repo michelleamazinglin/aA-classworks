@@ -11,27 +11,24 @@ export default class Tabs extends React.Component {
         this.changeIndex = this.changeIndex.bind(this);
     }
 
-    // changeIndex() {
-    //     this.setState({selectedIndex: });
-    // }
+    changeIndex(idx) {
+        this.setState({selectedIndex: idx});
+    }
 
     render() {
         const tabsList = this.props.array.map ((tab, idx) => {
-            return (
-                // <li key={idx}>
-                //     <h1 onClick={this.changeIndex}>
-                //         {tab.title}
-                //     </h1>
-                //     <article>{tab.content}</article>
-                // </li>
-                <Header key={idx} title = {tab.title} content = {tab.content}/>
-            )
+            return <Header key={idx} index={idx} title={tab.title}
+                           changeIndex={this.changeIndex}
+                           selected={this.state.selectedIndex === idx}/>
         });
         return (
             <>
                 <ul>
                    {tabsList}
                 </ul>
+                <article>
+                    {this.props.array[this.state.selectedIndex].content}
+                </article>
             </>
         )
     }
